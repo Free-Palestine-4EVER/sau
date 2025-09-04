@@ -6,7 +6,7 @@ import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Star, MapPin, Calendar, Users, Heart, Share2 } from "lucide-react"
+import { Star, MapPin, Calendar, Heart, Share2 } from "lucide-react"
 import { useCurrency } from "@/contexts/currency-context"
 
 interface TourCardProps {
@@ -131,12 +131,6 @@ export default function TourCard({ tour }: TourCardProps) {
                 </span>
               </div>
             )}
-
-            {/* Group Size */}
-            <div className="flex items-center gap-1 text-sm text-muted-foreground">
-              <Users className="h-4 w-4" />
-              <span>Max {tour.groupSize} people</span>
-            </div>
           </div>
         </div>
 

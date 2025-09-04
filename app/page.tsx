@@ -29,7 +29,6 @@ const saudiTours = [
     image:
       "https://zamzam-blog.s3.eu-west-1.amazonaws.com/wp-content/uploads/2022/05/Culute-of-Saudi-Arabia-840x450.jpg",
     duration: 5,
-    groupSize: 12,
     rating: 4.8,
     reviewCount: 89,
     category: ["Cultural", "History"],
