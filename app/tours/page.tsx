@@ -19,7 +19,6 @@ const tours = [
     category: "History & Culture",
     duration: 5,
     difficulty: "Easy",
-    groupSize: "2-15",
     rating: 4.9,
     reviewCount: 127,
     image: "/images/saudi-heritage-journey.png",
@@ -46,7 +45,6 @@ const tours = [
     category: "Adventure & Hiking",
     duration: 5,
     difficulty: "Moderate",
-    groupSize: "4-12",
     rating: 4.7,
     reviewCount: 89,
     image: "/images/desert-mountains.png",
@@ -73,7 +71,6 @@ const tours = [
     category: "Mixed Explorer",
     duration: 5,
     difficulty: "Easy",
-    groupSize: "2-16",
     rating: 4.8,
     reviewCount: 156,
     image: "/images/alula-hegra-explorer.png",
@@ -100,7 +97,6 @@ const tours = [
     category: "History & Culture",
     duration: 7,
     difficulty: "Easy",
-    groupSize: "2-15",
     rating: 4.9,
     reviewCount: 203,
     image: "https://www.leaders-mena.com/leaders/uploads/2024/01/1686470249536.jpg",
@@ -127,7 +123,6 @@ const tours = [
     category: "Adventure & Hiking",
     duration: 7,
     difficulty: "Challenging",
-    groupSize: "4-10",
     rating: 4.8,
     reviewCount: 134,
     image: "https://www.arabianbusiness.com/wp-content/uploads/sites/3/cloud/2022/12/06/Red-Sea-Grand-Hyatt.jpg",
@@ -154,7 +149,6 @@ const tours = [
     category: "Mixed Explorer",
     duration: 7,
     difficulty: "Moderate",
-    groupSize: "2-14",
     rating: 4.9,
     reviewCount: 178,
     image: "/images/saudi-heritage-journey.png",
@@ -181,7 +175,6 @@ const tours = [
     category: "History & Culture",
     duration: 10,
     difficulty: "Easy",
-    groupSize: "2-12",
     rating: 4.9,
     reviewCount: 95,
     image: "/images/alula-hegra-explorer.png",
@@ -208,7 +201,6 @@ const tours = [
     category: "Adventure & Hiking",
     duration: 10,
     difficulty: "Expert",
-    groupSize: "4-8",
     rating: 4.8,
     reviewCount: 67,
     image: "/images/desert-mountains.png",
@@ -235,7 +227,6 @@ const tours = [
     category: "Mixed Explorer",
     duration: 10,
     difficulty: "Moderate",
-    groupSize: "2-12",
     rating: 4.9,
     reviewCount: 142,
     image: "https://www.arabianbusiness.com/wp-content/uploads/sites/3/cloud/2022/12/06/Red-Sea-Grand-Hyatt.jpg",
@@ -399,10 +390,6 @@ export default function ToursPage() {
                         <div className="flex items-center gap-1">
                           <Clock className="h-4 w-4" />
                           {tour.duration} days
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Users className="h-4 w-4" />
-                          {tour.groupSize} people
                         </div>
                         <div className="flex items-center gap-1">
                           <Mountain className="h-4 w-4" />
