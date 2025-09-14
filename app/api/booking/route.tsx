@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
 
             <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e5e7eb;">
               <p style="color: #6b7280; margin-bottom: 15px;">Thank you for choosing Saudi Explorer!</p>
-              <p style="color: #6b7280; font-size: 14px; margin: 5px 0;">📧 info@saudiaexplore.com | 📱 WhatsApp: +966 XX XXX XXXX</p>
+              <p style="color: #6b7280; font-size: 14px; margin: 5px 0;">📧 info@saudiaexplore.com | 📱 WhatsApp:  +966 56 159 6033</p>
               <p style="color: #6b7280; font-size: 14px; margin: 5px 0;">🌐 www.saudiaexplore.com</p>
             </div>
           </div>
@@ -126,7 +126,7 @@ export async function POST(request: NextRequest) {
 
     // Send customer confirmation email
     await resend.emails.send({
-      from: "Saudi Explorer <bookings@saudiaexplore.com>",
+      from: "Saudi Explorer <info@saudiaexplore.com>",
       to: [bookingData.email],
       subject: `🎉 Booking Request Received - ${bookingData.tourTitle} (${bookingReference})`,
       html: customerEmailHtml,
@@ -134,7 +134,7 @@ export async function POST(request: NextRequest) {
 
     // Send company notification email
     await resend.emails.send({
-      from: "Saudi Explorer <bookings@saudiaexplore.com>",
+      from: "Saudi Explorer <info@saudiaexplore.com>",
       to: ["info@saudiaexplore.com"],
       subject: `New Booking Request: ${bookingData.tourTitle} - ${bookingReference}`,
       html: companyEmailHtml,

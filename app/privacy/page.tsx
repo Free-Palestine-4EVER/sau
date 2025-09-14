@@ -125,13 +125,13 @@ export default function PrivacyPage() {
                 <p>If you have any questions about this Privacy Policy, please contact us at:</p>
                 <div className="mt-4">
                   <p>
-                    <strong>Email:</strong> privacy@saudiexplorer.com
+                    <strong>Email:</strong> info@saudiexplorer.com
                   </p>
                   <p>
                     <strong>Phone:</strong> +966 12 345 6789
                   </p>
                   <p>
-                    <strong>Address:</strong> 123 King Fahd Road, Riyadh, Saudi Arabia
+                    <strong>Address:</strong> 23 King Fahd Road, Riyadh, Saudi Arabia
                   </p>
                 </div>
               </CardContent>
