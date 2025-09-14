@@ -29,6 +29,7 @@ const saudiTours = [
     image:
       "https://zamzam-blog.s3.eu-west-1.amazonaws.com/wp-content/uploads/2022/05/Culute-of-Saudi-Arabia-840x450.jpg",
     duration: 5,
+    groupSize: 12,
     rating: 4.8,
     reviewCount: 89,
     category: ["Cultural", "History"],
@@ -158,11 +159,76 @@ const saudiTours = [
   },
 ]
 
+// Guaranteed Tours data
+const guaranteedTours = [
+  {
+    id: "jewels-of-saudi-arabia",
+    title: "Jewels of Saudi Arabia",
+    slug: "jewels-of-saudi-arabia",
+    description:
+      "8 Days / 7 Nights journey through Jeddah, Medina, Al Ula, Tabuk, and Riyadh. Experience UNESCO sites, ancient tombs, and modern Saudi Arabia.",
+    image:
+      "https://media.cntraveler.com/photos/642b28a95e21b50e5b47c370/master/pass/Banyan%20Tree%20AlUla%20_LEDE%20%20MND_7247(2).jpg",
+    duration: 8,
+    groupSize: 15,
+    rating: 4.9,
+    reviewCount: 245,
+    category: ["Guaranteed", "Heritage"],
+    destinations: ["Jeddah", "Medina", "Al Ula", "Tabuk", "Riyadh"],
+    featured: true,
+    departures: "Every two weeks starting April 4, 2026",
+    route: "Jeddah → Medina → Al Ula → Tabuk → Riyadh → Jeddah",
+    pricing: {
+      season1: {
+        dates: "Apr 4 – Dec 12, 2026 (except trade fairs)",
+        doubleTriple: "$1,670",
+        singleSupplement: "$675",
+      },
+      season2: {
+        dates: "Dec 26, 2026 – Mar 20, 2027 (except trade fairs)",
+        doubleTriple: "$1,790",
+        singleSupplement: "$750",
+      },
+    },
+  },
+  {
+    id: "discover-saudi-arabia",
+    title: "Discover Saudi Arabia",
+    slug: "discover-saudi-arabia",
+    description:
+      "10 Days / 9 Nights comprehensive exploration with extended stays in each destination. Perfect for first-time visitors wanting the complete Saudi experience.",
+    image:
+      "https://res.cloudinary.com/enchanting/q_70,f_auto,w_870,h_580,c_lfill,g_auto/exodus-web/2022/07/hegra_alula_saudi_arabia_shutterstock.jpg",
+    duration: 10,
+    groupSize: 15,
+    rating: 4.8,
+    reviewCount: 189,
+    category: ["Guaranteed", "Complete"],
+    destinations: ["Jeddah", "Medina", "Al Ula", "Tabuk", "Riyadh"],
+    featured: true,
+    departures: "Every two weeks starting April 2, 2026",
+    route: "Jeddah → Medina → Al Ula → Tabuk → Riyadh → Jeddah",
+    pricing: {
+      season1: {
+        dates: "Apr 2 – Dec 10, 2026 (except trade fairs)",
+        doubleTriple: "$1,895",
+        singleSupplement: "$825",
+      },
+      season2: {
+        dates: "Dec 24, 2026 – Mar 18, 2027 (except trade fairs)",
+        doubleTriple: "$2,040",
+        singleSupplement: "$905",
+      },
+    },
+  },
+]
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col overflow-x-hidden">
       <HeroSection />
 
+      {/* Modern Saudi Renaissance section */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-sand-50 overflow-x-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -204,6 +270,133 @@ export default function Home() {
                 <Link href="/destinations">Discover Modern Saudi</Link>
               </BubbleButton>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Guaranteed Tours section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-emerald-50 to-green-50 overflow-x-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-green-100 text-green-700 hover:bg-green-200">Guaranteed Departures</Badge>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-green-800">Guaranteed Tours</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Fixed departure dates with guaranteed departures. Book with confidence knowing your tour will run as
+              scheduled.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {guaranteedTours.map((tour) => (
+              <Card
+                key={tour.id}
+                className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-green-200 shadow-lg"
+              >
+                <div className="relative h-64">
+                  <Image
+                    src={tour.image || "/placeholder.svg"}
+                    alt={tour.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute top-4 left-4">
+                    <Badge className="bg-green-600 text-white hover:bg-green-700">Guaranteed</Badge>
+                  </div>
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <h3 className="text-xl font-bold mb-1">{tour.title}</h3>
+                    <p className="text-sm opacity-90">
+                      {tour.duration} Days / {tour.duration - 1} Nights
+                    </p>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <div className="space-y-4">
+                    <p className="text-muted-foreground">{tour.description}</p>
+
+                    <div className="space-y-2">
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-sm gap-1 sm:gap-0">
+                        <span className="font-medium text-green-700">Route:</span>
+                        <span className="text-muted-foreground text-xs sm:text-sm break-words">{tour.route}</span>
+                      </div>
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-sm gap-1 sm:gap-0">
+                        <span className="font-medium text-green-700">Departures:</span>
+                        <span className="text-muted-foreground text-xs sm:text-sm">{tour.departures}</span>
+                      </div>
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between text-sm gap-1 sm:gap-0">
+                        <span className="font-medium text-green-700">Group Size:</span>
+                        <span className="text-muted-foreground text-xs sm:text-sm">Max {tour.groupSize} people</span>
+                      </div>
+                    </div>
+
+                    <div className="bg-green-50 p-4 rounded-lg border border-green-200">
+                      <h4 className="font-semibold text-green-800 mb-3">Pricing</h4>
+                      <div className="space-y-3">
+                        <div className="text-sm">
+                          <div className="font-medium text-green-700 mb-1 text-xs sm:text-sm">
+                            {tour.pricing.season1.dates}
+                          </div>
+                          <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-0">
+                            <span className="text-xs sm:text-sm">Per person in Double/Triple:</span>
+                            <span className="font-semibold text-sm">{tour.pricing.season1.doubleTriple}</span>
+                          </div>
+                          <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-0">
+                            <span className="text-xs sm:text-sm">Single Supplement:</span>
+                            <span className="font-semibold text-sm">{tour.pricing.season1.singleSupplement}</span>
+                          </div>
+                        </div>
+                        <div className="text-sm border-t border-green-200 pt-3">
+                          <div className="font-medium text-green-700 mb-1 text-xs sm:text-sm">
+                            {tour.pricing.season2.dates}
+                          </div>
+                          <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-0">
+                            <span className="text-xs sm:text-sm">Per person in Double/Triple:</span>
+                            <span className="font-semibold text-sm">{tour.pricing.season2.doubleTriple}</span>
+                          </div>
+                          <div className="flex flex-col sm:flex-row sm:justify-between gap-1 sm:gap-0">
+                            <span className="text-xs sm:text-sm">Single Supplement:</span>
+                            <span className="font-semibold text-sm">{tour.pricing.season2.singleSupplement}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between pt-4 border-t gap-3 sm:gap-0">
+                      <div className="flex items-center gap-2">
+                        <div className="flex">
+                          {[...Array(5)].map((_, i) => (
+                            <span key={i} className="text-yellow-400 text-sm">
+                              ★
+                            </span>
+                          ))}
+                        </div>
+                        <span className="text-sm text-muted-foreground">
+                          {tour.rating} ({tour.reviewCount} reviews)
+                        </span>
+                      </div>
+                      <BubbleButton asChild className="bg-green-600 hover:bg-green-700 w-full sm:w-auto">
+                        <Link href={`/guaranteed/${tour.slug}`}>Get Quote</Link>
+                      </BubbleButton>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <BubbleButton
+              asChild
+              variant="outline"
+              size="lg"
+              className="gap-2 border-green-600 text-green-600 hover:bg-green-50"
+            >
+              <Link href="/guaranteed">
+                View All Guaranteed Tours
+                <ChevronRight className="h-4 w-4" />
+              </Link>
+            </BubbleButton>
           </div>
         </div>
       </section>
@@ -501,6 +694,38 @@ export default function Home() {
   )
 }
 
+// Separate component for travel tip cards
+function TravelTipCard({ image, title, description }) {
+  const [isImageLoaded, setIsImageLoaded] = useState(false)
+
+  return (
+    <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-all duration-300">
+      <div className="relative h-48 bg-sand-100">
+        {!isImageLoaded && (
+          <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-sand-100 via-sand-200 to-sand-100 bg-[length:400%_100%]" />
+        )}
+
+        <Image
+          src={image || "/placeholder.svg"}
+          alt={title}
+          fill
+          className={`object-cover ${isImageLoaded ? "opacity-100" : "opacity-0"} transition-opacity duration-300`}
+          onLoad={() => setIsImageLoaded(true)}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+          loading="lazy"
+        />
+      </div>
+      <CardContent className="p-6">
+        <h3 className="text-xl font-bold mb-2 text-sand-700">{title}</h3>
+        <p className="text-muted-foreground mb-4">{description}</p>
+        <BubbleButton asChild variant="outline" className="w-full">
+          <Link href="/travel-tips">Read More</Link>
+        </BubbleButton>
+      </CardContent>
+    </Card>
+  )
+}
+
 function ModernRenaissanceCarousel() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
@@ -558,37 +783,5 @@ function ModernRenaissanceCarousel() {
         ))}
       </div>
     </div>
-  )
-}
-
-// Separate component for travel tip cards
-function TravelTipCard({ image, title, description }) {
-  const [isImageLoaded, setIsImageLoaded] = useState(false)
-
-  return (
-    <Card className="overflow-hidden border-none shadow-md hover:shadow-lg transition-all duration-300">
-      <div className="relative h-48 bg-sand-100">
-        {!isImageLoaded && (
-          <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-sand-100 via-sand-200 to-sand-100 bg-[length:400%_100%]" />
-        )}
-
-        <Image
-          src={image || "/placeholder.svg"}
-          alt={title}
-          fill
-          className={`object-cover ${isImageLoaded ? "opacity-100" : "opacity-0"} transition-opacity duration-300`}
-          onLoad={() => setIsImageLoaded(true)}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
-          loading="lazy"
-        />
-      </div>
-      <CardContent className="p-6">
-        <h3 className="text-xl font-bold mb-2 text-sand-700">{title}</h3>
-        <p className="text-muted-foreground mb-4">{description}</p>
-        <BubbleButton asChild variant="outline" className="w-full">
-          <Link href="/travel-tips">Read More</Link>
-        </BubbleButton>
-      </CardContent>
-    </Card>
   )
 }

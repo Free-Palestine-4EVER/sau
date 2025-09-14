@@ -868,10 +868,10 @@ export default function Saudi10DCompleteExperiencePage() {
                     <div>
                       <div className="text-muted-foreground mb-1">Email us</div>
                       <a
-                        href="mailto:luxury@saudiexplorer.com"
+                        href="mailto:info@saudiaexplorer.com"
                         className="font-semibold text-lg hover:underline text-purple-600"
                       >
-                        luxury@saudiexplorer.com
+                        info@saudiaexplorer.com
                       </a>
                     </div>
                   </div>

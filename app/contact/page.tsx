@@ -170,7 +170,7 @@ export default function ContactPage() {
                         id="phone"
                         value={formData.phone}
                         onChange={(e) => handleInputChange("phone", e.target.value)}
-                        placeholder="+966 50 123 4567"
+                        placeholder="+966 56 159 6033"
                         className="border-amber-200 focus:border-amber-500"
                       />
                     </div>
@@ -269,8 +269,7 @@ export default function ContactPage() {
                   <Phone className="h-5 w-5 text-amber-600 mt-1" />
                   <div>
                     <p className="font-medium">Phone</p>
-                    <p className="text-sm text-gray-600">+966 11 123 4567</p>
-                    <p className="text-sm text-gray-600">+966 50 987 6543</p>
+                    <p className="text-sm text-gray-600">+966 12 345 6789</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">

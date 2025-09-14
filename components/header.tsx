@@ -300,6 +300,18 @@ export default function Header() {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+                <Link href="/guaranteed" legacyBehavior passHref>
+                  <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 px-4 py-2 text-sm font-medium">
+                    <span className="flex items-center gap-2">
+                      <Sparkles className="h-4 w-4" />
+                      Guaranteed Tours
+                      <Star className="h-4 w-4" />
+                    </span>
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
                 <NavigationMenuTrigger className="hover:bg-amber-50 hover:text-amber-700">
                   Destinations
                 </NavigationMenuTrigger>
@@ -760,10 +772,24 @@ export default function Header() {
                     </Collapsible>
                   </div>
 
+                  <Link
+                    href="/guaranteed"
+                    className="group relative overflow-hidden rounded-lg p-3 bg-gradient-to-r from-green-500/80 via-emerald-500/80 to-green-600/80 backdrop-blur-sm border border-green-300/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-in slide-in-from-right-4 duration-500 delay-550"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-r from-green-400/20 via-emerald-400/20 to-green-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="relative flex items-center gap-2">
+                      <Sparkles className="h-4 w-4 text-white animate-pulse" />
+                      <span className="text-base font-semibold text-white drop-shadow-lg">Guaranteed Tours</span>
+                      <Star className="h-4 w-4 text-white animate-pulse delay-500" />
+                    </div>
+                    <div className="relative text-xs text-green-100 mt-1 drop-shadow">Fixed departure dates</div>
+                  </Link>
+
                   {/* Events Link */}
                   <Link
                     href="/events"
-                    className="group relative overflow-hidden rounded-lg p-3 bg-gradient-to-r from-purple-100/80 via-pink-100/80 to-rose-100/80 backdrop-blur-sm border border-purple-200/50 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 animate-in slide-in-from-right-4 duration-500 delay-500"
+                    className="group relative overflow-hidden rounded-lg p-3 bg-gradient-to-r from-purple-100/80 via-pink-100/80 to-rose-100/80 backdrop-blur-sm border border-purple-200/50 shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 animate-in slide-in-from-right-4 duration-500 delay-600"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-rose-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
