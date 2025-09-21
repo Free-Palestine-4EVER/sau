@@ -855,8 +855,8 @@ export default function Saudi10DCompleteExperiencePage() {
                     </div>
                     <div>
                       <div className="text-muted-foreground mb-1">Call us</div>
-                      <a href="tel:+966123456789" className="font-semibold text-lg hover:underline text-purple-600">
-                        +966 12 345 6789
+                      <a href="tel:+966561596033" className="font-semibold text-lg hover:underline text-purple-600">
+                        +966 56 159 6033
                       </a>
                     </div>
                   </div>

@@ -117,7 +117,7 @@ export default function TermsPage() {
                     <strong>Email:</strong> legal@saudiexplorer.com
                   </p>
                   <p>
-                    <strong>Phone:</strong> +966 12 345 6789
+                    <strong>Phone:</strong> +966 56 159 6033
                   </p>
                   <p>
                     <strong>Address:</strong> 123 King Fahd Road, Riyadh, Saudi Arabia

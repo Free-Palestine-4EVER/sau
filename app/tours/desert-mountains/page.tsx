@@ -548,8 +548,8 @@ export default function DesertMountainsPage() {
                       </div>
                       <div>
                         <div className="text-sm text-muted-foreground">Adventure Line</div>
-                        <a href="tel:+966-800-ADVENTURE" className="font-medium hover:underline text-orange-700">
-                          +966-800-ADVENTURE
+                        <a href="tel:+966561596033" className="font-medium hover:underline text-orange-700">
+                          +966 56 159 6033
                         </a>
                       </div>
                     </div>

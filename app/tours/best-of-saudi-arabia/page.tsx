@@ -785,8 +785,8 @@ export default function BestOfSaudiArabiaPage() {
                       </div>
                       <div>
                         <div className="text-sm text-muted-foreground">Call us</div>
-                        <a href="tel:+966-800-SAUDI" className="font-medium hover:underline text-sky-700">
-                          +966-800-SAUDI
+                        <a href="tel:+966561596033" className="font-medium hover:underline text-sky-700">
+                          +966 56 159 6033
                         </a>
                       </div>
                     </div>

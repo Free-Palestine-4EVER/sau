@@ -128,7 +128,7 @@ export default function PrivacyPage() {
                     <strong>Email:</strong> info@saudiexplorer.com
                   </p>
                   <p>
-                    <strong>Phone:</strong> +966 12 345 6789
+                    <strong>Phone:</strong> +966 56 159 6033
                   </p>
                   <p>
                     <strong>Address:</strong> 23 King Fahd Road, Riyadh, Saudi Arabia

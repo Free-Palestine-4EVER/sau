@@ -721,8 +721,8 @@ export default function Saudi7DHistoryCulturePage() {
                       </div>
                       <div>
                         <div className="text-sm text-muted-foreground">Heritage Hotline</div>
-                        <a href="tel:+966123456789" className="font-medium hover:underline text-amber-700">
-                          +966 12 345 6789
+                        <a href="tel:+966561596033" className="font-medium hover:underline text-amber-700">
+                          +966 56 159 6033
                         </a>
                       </div>
                     </div>
