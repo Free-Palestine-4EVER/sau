@@ -288,11 +288,11 @@ export default function JewelsOfSaudiArabiaPage() {
                           <div className="space-y-1">
                             <div className="flex justify-between">
                               <span>Per person in Double/Triple:</span>
-                              <span className="font-bold text-green-700">$1,670</span>
+                              <span className="font-bold text-green-700">$2,170</span>
                             </div>
                             <div className="flex justify-between">
                               <span>Single Supplement:</span>
-                              <span className="font-bold text-green-700">$675</span>
+                              <span className="font-bold text-green-700">$875</span>
                             </div>
                           </div>
                         </div>
@@ -303,11 +303,11 @@ export default function JewelsOfSaudiArabiaPage() {
                           <div className="space-y-1">
                             <div className="flex justify-between">
                               <span>Per person in Double/Triple:</span>
-                              <span className="font-bold text-green-700">$1,790</span>
+                              <span className="font-bold text-green-700">$2,290</span>
                             </div>
                             <div className="flex justify-between">
                               <span>Single Supplement:</span>
-                              <span className="font-bold text-green-700">$750</span>
+                              <span className="font-bold text-green-700">$950</span>
                             </div>
                           </div>
                         </div>

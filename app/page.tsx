@@ -181,13 +181,13 @@ const guaranteedTours = [
     pricing: {
       season1: {
         dates: "Apr 4 – Dec 12, 2026 (except trade fairs)",
-        doubleTriple: "$1,670",
-        singleSupplement: "$675",
+        doubleTriple: "$2,170",
+        singleSupplement: "$875",
       },
       season2: {
         dates: "Dec 26, 2026 – Mar 20, 2027 (except trade fairs)",
-        doubleTriple: "$1,790",
-        singleSupplement: "$750",
+        doubleTriple: "$2,290",
+        singleSupplement: "$950",
       },
     },
   },
@@ -211,13 +211,13 @@ const guaranteedTours = [
     pricing: {
       season1: {
         dates: "Apr 2 – Dec 10, 2026 (except trade fairs)",
-        doubleTriple: "$1,895",
-        singleSupplement: "$825",
+        doubleTriple: "$2,395",
+        singleSupplement: "$1,025",
       },
       season2: {
         dates: "Dec 24, 2026 – Mar 18, 2027 (except trade fairs)",
-        doubleTriple: "$2,040",
-        singleSupplement: "$905",
+        doubleTriple: "$2,540",
+        singleSupplement: "$1,105",
       },
     },
   },

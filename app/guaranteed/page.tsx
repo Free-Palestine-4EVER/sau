@@ -21,7 +21,7 @@ const guaranteedTours = [
     destinations: ["Jeddah", "Medina", "Al Ula", "Tabuk", "Riyadh"],
     featured: true,
     departures: "Every two weeks starting from April 4. 2025.",
-    startingPrice: "$1,670",
+    startingPrice: "$2,170",
     keyHighlights: ["UNESCO Hegra", "Prophet's Mosque", "Ancient Dadan", "Riyadh Museums"],
   },
   {
@@ -38,7 +38,7 @@ const guaranteedTours = [
     destinations: ["Jeddah", "Medina", "Al Ula", "Tabuk", "Riyadh"],
     featured: true,
     departures: "Every two weeks starting from April 4. 2025.",
-    startingPrice: "$1,895",
+    startingPrice: "$2,395",
     keyHighlights: ["Extended stays", "Free day in Riyadh", "Complete city tours", "Cultural experiences"],
   },
 ]

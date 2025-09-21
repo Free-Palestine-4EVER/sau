@@ -303,11 +303,11 @@ export default function DiscoverSaudiArabiaPage() {
                           <div className="space-y-1">
                             <div className="flex justify-between">
                               <span>Per person in Double/Triple:</span>
-                              <span className="font-bold text-green-700">$1,895</span>
+                              <span className="font-bold text-green-700">$2,395</span>
                             </div>
                             <div className="flex justify-between">
                               <span>Single Supplement:</span>
-                              <span className="font-bold text-green-700">$825</span>
+                              <span className="font-bold text-green-700">$1,025</span>
                             </div>
                           </div>
                         </div>
@@ -318,11 +318,11 @@ export default function DiscoverSaudiArabiaPage() {
                           <div className="space-y-1">
                             <div className="flex justify-between">
                               <span>Per person in Double/Triple:</span>
-                              <span className="font-bold text-green-700">$2,040</span>
+                              <span className="font-bold text-green-700">$2,540</span>
                             </div>
                             <div className="flex justify-between">
                               <span>Single Supplement:</span>
-                              <span className="font-bold text-green-700">$905</span>
+                              <span className="font-bold text-green-700">$1,105</span>
                             </div>
                           </div>
                         </div>
